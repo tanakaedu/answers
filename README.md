@@ -69,8 +69,8 @@
 ```
     <div class="container-fluid">
         <div class="col-xs-6">
-            <textarea name="" id="msg" cols="80" rows="20"></textarea>
-            <button name="button" onclick="clickEvent()">send message!</button>
+            <textarea name="" class="form-control" id="msg" cols="80" rows="20"></textarea>
+            <button class="btn" name="button" onclick="clickEvent()">send message!</button>
         </div>
         <div class="col-xs-6">
             <div id="board"></div>
