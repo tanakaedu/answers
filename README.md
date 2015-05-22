@@ -39,21 +39,21 @@
 ## index.htmlを作成
 - [ファイル]>[新規作成]>[ファイル]を選択
 - [HTML]ページを選択して、名前を「index.html」として[追加]を押す
-- [ソリューションエクスプローラー]から[Scripts]を開き、[jquery-x.x.x.min.js]と[bootstrap.min.js]をドラッグして、ソース上の<body>～</body>の間にドロップする
+- [ソリューションエクスプローラー]から[Scripts]を開き、[jquery-x.x.x.min.js]と[bootstrap.min.js]をドラッグして、ソース上の&lt;body&gt;～&lt;/body&gt;の間にドロップする
 - [ソリューションエクスプローラー]から[Content]>[bootstrap]を開き、[bootstrap.less]をダブルクリックして呼び出す
 - 保存ボタンを押すと、lessファイルがビルドされる
 - [index.html]に切り替える
-- 作成された[bootstrap.css]を開いて、[bootstrap.min.css]をドラッグして、</title>の後ろにドロップする
+- 作成された[bootstrap.css]を開いて、[bootstrap.min.css]をドラッグして、&lt;/title&gt;の後ろにドロップする
 
 ## Milkcocoaを組み込む
 - https://mlkcca.com/ をWebブラウザで開く
 - [チュートリアル]を選ぶ
-- 以下の2行を選択して、</head>の上に貼り付ける
+- 以下の2行を選択して、&lt;/head&gt;の上に貼り付ける
 ```
     <script src="http://cdn.mlkcca.com/v2.0.0/milkcocoa.js"></script>
     <script src="main.js"></script>
 ```
-- bodyの間の3行をコピーして、<body>の下の行に貼り付ける
+- bodyの間の3行をコピーして、&lt;body&gt;の下の行に貼り付ける
 - Visual Studioで[ファイル]>[新規作成]>[ファイル]を選択
 - [JavaScript]ファイルを選択して、名前を[main.js]にして[追加]する
 - Milkcocoaのページに切り替えて、[main.js]タブに切り替えて、中身を全てコピー
@@ -65,7 +65,7 @@
 # プログラムを投稿できるように機能を拡張
 入力エリアのレイアウトを変更する
 - Visual Studioに切り替える
-- index.htmlを開いて、<body>から</body>の間を以下のように書き換える
+- index.htmlを開いて、&lt;body&gt;から&lt;/body&gt;の間を以下のように書き換える
 ```
     <div class="container">
         <textarea name="" id="msg" cols="80" rows="10"></textarea>
