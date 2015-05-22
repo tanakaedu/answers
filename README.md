@@ -65,7 +65,7 @@
 # プログラムを投稿できるように機能を拡張
 入力エリアのレイアウトを変更する
 - Visual Studioに切り替える
-- index.htmlを開いて、&lt;body&gt;から&lt;/body&gt;の間を以下のように書き換える
+- index.htmlを開いて、&lt;body&gt;から&lt;/body&gt;の間を以下のように書き換える(*下から2行目のjQueryのバージョンが違う可能性があるので注意*）
 ```
     <div class="container-fluid">
         <div class="col-xs-6">
@@ -77,10 +77,10 @@
         </div>
     </div>
 
-    <script src="Scripts/jquery-1.9.0.min.js"></script>
+    <script src="Scripts/jquery-2.1.4.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
 ```
-- main.jsを以下のように書き換える(コピペでよい)
+- main.jsを以下のように書き換える(コピペの後、2行目を先ほど指示したものに差し替える)
 ```
 var myname = "自分の名前";
 var milkcocoa = new MilkCocoa('{ your-app-id }.mlkcca.com/');
