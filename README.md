@@ -67,12 +67,15 @@
 - Visual Studioに切り替える
 - index.htmlを開いて、&lt;body&gt;から&lt;/body&gt;の間を以下のように書き換える
 ```
-    <div class="container">
-        <textarea name="" id="msg" cols="80" rows="10"></textarea>
+    <div class="container-fluid">
+        <div class="col-xs-6">
+            <textarea name="" id="msg" cols="80" rows="20"></textarea>
+            <button name="button" onclick="clickEvent()">send message!</button>
+        </div>
+        <div class="col-xs-6">
+            <div id="board"></div>
+        </div>
     </div>
-    <button name="button" onclick="clickEvent()">send message!</button>
-
-    <div id="board"></div>
 
     <script src="Scripts/jquery-1.9.0.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
