@@ -29,8 +29,8 @@
 - [HTML]ページを選択して、名前を「index.html」として[追加]を押す
 
 ## 必要なCSSやJavaScriptライブラリを読み込む
-- [Bootstrap公式ページのGetting started](http://getbootstrap.com/getting-started/#download-cdn)を開く
-- CSSを読み込むために、以下の行をコピーして、&lt;title&gt;&lt;/title&gt;の下に貼り付ける
+- [Bootstrap公式ページのGetting started](http://getbootstrap.com/getting-started/#download-cdn)からCDNのURLを確認する
+- CSSを読み込むために、以下の行をコピーして、&lt;title&gt;&lt;/title&gt;の行の下に貼り付ける
 ```
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 ```
@@ -38,8 +38,8 @@
 ```
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 ```
-- jQueryを読み込むために、GoogleのCDNを利用する。[こちら](https://developers.google.com/speed/libraries/#jquery)を開く
-- jQueryの2.x snippetにある以下の行をコピーして、先ほど貼り付けたbootstrap.min.jsの上に貼り付ける
+- GoogleのCDNを[こちら](https://developers.google.com/speed/libraries/#jquery)で確認
+- jQueryの2.x snippetにある以下の行をコピーして、先ほど貼り付けたbootstrap.min.jsの行の上に貼り付ける
 ```
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 ```
