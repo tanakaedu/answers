@@ -1,6 +1,9 @@
 # anwers
 演習の回答を共有するためのWebページを自分たちで作ろう。
 
+# デモページ
+ここで作成するページのデモは [こちら](http://tanakaedu.github.io/answers/)
+
 # 開発環境
 - 開発ツール
     - Visual Studio Community 2013
