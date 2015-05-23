@@ -9,7 +9,7 @@
 - 情報の共有方法
     - Milkcocoa
 - 画面のレイアウト
-    - Bootstrap
+    - Bootstrap(+jQuery)
 
 # 開発手順
 ## 環境構築
