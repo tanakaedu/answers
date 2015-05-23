@@ -1,11 +1,14 @@
 ﻿var myname = "自分の名前";
-var milkcocoa = new MilkCocoa("dogi9y8jhbc.mlkcca.com");
+var milkcocoa = new MilkCocoa('dogi9y8jhbc.mlkcca.com');
 /* your-app-id にアプリ作成時に発行されるapp-idを記入します */
 var chatDataStore = milkcocoa.dataStore('chat');
-var textArea, board;
+var nameText, textArea, board;
 window.onload = function () {
+    nameText = document.getElementById("nm");
     textArea = document.getElementById("msg");
     board = document.getElementById("board");
+    nameText.setAttribute("value", myname);
+
     //pushした順番に対して降順で取得
     milkcocoa.dataStore('chat').stream().next(function (err, data) {
         for (var i = 0  ; i < data.length ; i++) {
@@ -20,7 +23,7 @@ function clickEvent() {
 }
 
 function sendText(text) {
-    chatDataStore.push({ message: text ,myname: myname});
+    chatDataStore.push({ message: text, myname: nameText.value });
     console.log("送信完了!");
     textArea.value = "";
 }
@@ -36,7 +39,7 @@ function addText(text) {
     panelDom.className = "panel panel-primary";
     nameDom.className = "panel-heading";
 
-    nameDom.innerHTML = "<strong>"+text.myname+"</strong>";
+    nameDom.innerHTML = "<strong>" + text.myname + "</strong>";
     msgDom.innerHTML = text.message;
     panelDom.appendChild(nameDom);
     panelDom.appendChild(msgDom);

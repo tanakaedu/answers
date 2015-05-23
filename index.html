@@ -1,17 +1,18 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>答え共有</title>
-    <link href="Content/bootstrap/bootstrap.min.css" rel="stylesheet" />
-    <script src="https://cdn.mlkcca.com/v2.0.0/milkcocoa.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>答え共有ページデモ</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="http://cdn.mlkcca.com/v2.0.0/milkcocoa.js"></script>
     <script src="main.js"></script>
 </head>
 <body>
 
     <div class="container-fluid">
         <div class="col-xs-6">
-            <textarea name="" class="form-control" id="msg" cols="80" rows="20"></textarea>
+            <input type="text" class="form-control" id="nm" placeholder="名前" />
+            <textarea name="" class="form-control" id="msg" cols="80" rows="20" placeholder="送信テキスト"></textarea>
             <button class="btn" name="button" onclick="clickEvent()">send message!</button>
         </div>
         <div class="col-xs-6">
@@ -19,9 +20,7 @@
         </div>
     </div>
 
-
-    <script src="Scripts/jquery-2.1.4.min.js"></script>
-    <script src="Scripts/bootstrap.min.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </body>
 </html>
