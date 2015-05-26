@@ -1,5 +1,5 @@
 ﻿var myname = "自分の名前";
-var milkcocoa = new MilkCocoa('yourappid.mlkcca.com');
+var milkcocoa = new MilkCocoa('seaia5h6tu1.mlkcca.com');
 /* your-app-id にアプリ作成時に発行されるapp-idを記入します */
 var chatDataStore = milkcocoa.dataStore('chat');
 var nameText, textArea, board;
