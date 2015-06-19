@@ -1,5 +1,5 @@
 var myname = "自分の名前";
-var myDataRef = new Firebase('https://flickering-inferno-4162.firebaseio.com/');
+var myDataRef = new Firebase('https://[your-app-id].firebaseio.com/');
 /* your-app-id にアプリ作成時に発行されるapp-idを記入します */
 var nameText, textArea, board;
 window.onload = function () {
