@@ -12,6 +12,7 @@
     - JavaScript
 - 情報の共有方法
     - Milkcocoa
+    - Firebaseへの対応方法を最後に追記
 - 画面のレイアウト
     - Bootstrap(+jQuery)
 
@@ -156,4 +157,58 @@ function addText(text) {
 
 以上で完成。ブラウザを再読み込みして、動かしてみよう。
 
+
+# Firebaseへの対応方法
+ここまでの作業が完了していることを前提に、Firebaseへの書き換え方をまとめる。
+
+## index.htmlの修正
+- 7行目近辺の以下のMilkcocoaのライブラリの読み込みを、Firebaseのものに差し替える
+- 変更前
+```
+    <script src="http://cdn.mlkcca.com/v2.0.0/milkcocoa.js"></script>
+```
+- 変更後
+```
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+```
+
+## main.jsの修正
+### 2行目付近
+- 変更前
+```
+var milkcocoa = new MilkCocoa('{ your-app-id }.mlkcca.com/');
+var chatDataStore = milkcocoa.dataStore('chat');
+```
+- 変更後
+```
+var myDataRef = new Firebase('https://[your-app-id].firebaseio.com/');
+```
+- 上記の[your-app-id]の部分は、Firebaseにsign upして、ログイン後のFirebase URLで確認して書き換える
+
+###  12行目付近
+- 以下のコードは不要なので削除
+```
+    //pushした順番に対して降順で取得
+    milkcocoa.dataStore('chat').stream().next(function (err, data) {
+        for (var i = 0  ; i < data.length ; i++) {
+            addText(data[i].value);
+        }
+    });
+```
+
+### 18行目付近
+- 変更前
+```
+chatDataStore.on("push", function (data) {
+    addText(data.value);
+});
+ ```
+- 変更後
+```
+myDataRef.on("child_added", function (data) {
+    addText(data.val());
+});
+```
+
+以上で、対応完了。
 
