@@ -12,7 +12,7 @@
     - JavaScript
 - 情報の共有方法
     - Milkcocoa
-    - Firebaseへの対応方法を最後に追記
+    - Firebaseへの対応方法を[最後に追記](https://github.com/tanakaedu/answers/blob/master/README.md#firebase%E3%81%B8%E3%81%AE%E5%AF%BE%E5%BF%9C%E6%96%B9%E6%B3%95)
 - 画面のレイアウト
     - Bootstrap(+jQuery)
 
