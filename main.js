@@ -1,20 +1,12 @@
-﻿var myname = "自分の名前";
-var milkcocoa = new MilkCocoa('{ your-app-id }.mlkcca.com/');
+var myname = "自分の名前";
+var myDataRef = new Firebase('https://flickering-inferno-4162.firebaseio.com/');
 /* your-app-id にアプリ作成時に発行されるapp-idを記入します */
-var chatDataStore = milkcocoa.dataStore('chat');
 var nameText, textArea, board;
 window.onload = function () {
     nameText = document.getElementById("nm");
     textArea = document.getElementById("msg");
     board = document.getElementById("board");
     nameText.setAttribute("value", myname);
-
-    //pushした順番に対して降順で取得
-    milkcocoa.dataStore('chat').stream().next(function (err, data) {
-        for (var i = 0  ; i < data.length ; i++) {
-            addText(data[i].value);
-        }
-    });
 }
 
 function clickEvent() {
@@ -23,13 +15,13 @@ function clickEvent() {
 }
 
 function sendText(text) {
-    chatDataStore.push({ message: text, myname: nameText.value });
+    myDataRef.push({ message: text, myname: nameText.value });
     console.log("送信完了!");
     textArea.value = "";
 }
 
-chatDataStore.on("push", function (data) {
-    addText(data.value);
+myDataRef.on("child_added", function (data) {
+    addText(data.val());
 });
 
 function addText(text) {
